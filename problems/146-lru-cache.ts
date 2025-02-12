@@ -1,4 +1,4 @@
-class LRUCache {
+export class LRUCache {
   #maxCapacity: number
   #cache: Map<number, number>
 
@@ -20,9 +20,9 @@ class LRUCache {
   put(key: number, value: number): void {
     if (this.#cache.has(key)) {
       this.#cache.delete(key)
-    } else if (this.#cache.size > 0 && this.#cache.size === this.#maxCapacity) {
+    } else if (this.#cache.size === this.#maxCapacity) {
       const lruKey = this.#cache.keys().next().value
-      this.#cache.delete(lruKey)
+      lruKey && this.#cache.delete(lruKey)
     }
 
     this.#cache.set(key, value)
