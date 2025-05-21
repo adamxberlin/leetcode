@@ -1,5 +1,7 @@
 import { describe, expect, test } from 'vitest'
 
+// https://leetcode.com/problems/valid-palindrome/
+
 function isPalindrome(s: string): boolean {
   // Unexpectedly faster, cleaner and more concise than comparing and skipping values!
   s = s.replace(/[^a-z0-9]/gi, '').toLowerCase()

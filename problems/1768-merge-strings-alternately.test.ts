@@ -1,5 +1,7 @@
 import { describe, expect, test } from 'vitest'
 
+// https://leetcode.com/problems/merge-strings-alternately/
+
 function mergeAlternately(word1: string, word2: string): string {
   let result = ''
   let i = 0

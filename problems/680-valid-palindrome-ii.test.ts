@@ -1,5 +1,7 @@
 import { describe, expect, test } from 'vitest'
 
+// https://leetcode.com/problems/valid-palindrome-ii/
+
 function validPalindrome(s: string, i = 0, j = s.length - 1, lastChance = false): boolean {
   while (i < j) {
     if (s[i] !== s[j]) {
